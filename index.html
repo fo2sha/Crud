@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Managment System</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div class="w-75 mx-auto">
+        <h1 class="pt-3">Product Managment System</h1>
+        <form action="#">
+            <div>
+                <label for="productNameInput" class="py-2">productName :</label>
+                <input type="text" oninput="validateInputName();" class="form-control" id="productNameInput">
+            </div>
+            <div>
+                <label for="productPriceInput" class="py-2">productPrice :</label>
+                <input type="number" class="form-control" id="productPriceInput">
+            </div>
+            <div>
+                <label for="productCategoryInput" class="py-2">productCategory :</label>
+                <input type="text" class="form-control" id="productCategoryInput">
+            </div>
+            <div>
+                <label for="productDescriptionInput" class="py-2">productDesc :</label>
+                <textarea class="form-control" id="productDescriptionInput" cols="30" rows="3"></textarea>
+            </div>
+            <div>
+                <button id="btnAdd" onclick="addProduct();" class="btn btn-info py-2 mt-3">Add Product</button>
+                <button id="btnUpdate" onclick="addProduct();" class="btn btn-warning py-2 mt-3 d-none px-4">Update</button>
+            </div>
+        </form>
+        <div class="py-2 pt-5 w-75  mx-auto">
+            <label for="Search" class="py-2">Search :</label>
+            <input oninput="searchProducts(this.value)" type="text" placeholder="Search By Name" id="Search" class="form-control">
+        </div>
+        <div class="w-75 mx-auto">
+            <table class="table mt-5">
+                <thead class="fw-bold">
+                    <tr>
+                        <td>index</td>
+                        <td>productName</td>
+                        <td>productPrice</td>
+                        <td>productCategory</td>
+                        <td>productDesc</td>
+                        <td>update</td>
+                        <td>delete</td>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+   </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
